@@ -1,0 +1,199 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+$brand-color: #c78b42;
+$brand-color2: #001a09;
+$brand-color2tra: #001a09e8;
+$font-size:(
+    "tiny": 18px,
+    "small": 24px,
+    "medium": 32px,
+    "large": 64px,
+    "huge": 122px
+);
+$font-style1: 'Poppins', sans-serif;
+@mixin responsive-title ($size, $weight, $top, $left, $line) {
+    font-size: map-get($font-size , $size );
+    font-weight: $weight;
+    color: $brand-color;
+    position: absolute;
+    top: $top;
+    left: $left;
+    line-height: $line;
+    display: block;
+    text-align: left;
+}
+@mixin responsive-subtitle ($size, $weight) {
+    font-size: map-get($font-size, $size );
+            font-weight: $weight;
+            display: block;
+            text-align: left;
+}
+@mixin responsive-booking-btn ($size, $top, $left, $weight){
+             padding: 10px 15px;
+             list-style: none;
+             text-decoration: none;
+             color: $brand-color;
+             background-color: $brand-color2;
+             position: absolute;
+             top: $top;
+             left: $left;
+             text-align: left;
+             font-size: map-get($font-size, $size );
+             font-family: $font-style1;
+             font-weight: $weight;
+             border: 2px solid transparent;
+}
+@mixin responsive-icons ($width, $top, $left){
+    width: $width;
+    top: $top;
+    left: $left;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: url(../../images/pc-bg3.jpg) no-repeat center center/cover;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    font-family: $font-style1;
+    .details{
+        .brand-title{
+            @include responsive-title("huge", 300, 45%, 70%, 55px);
+            z-index: 1;
+            animation-name: slide-title;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            @keyframes slide-title {
+                0%{
+                    left: 100%;
+                    color: transparent;
+                }
+                100%{
+                   left: 70%;
+                    color: $brand-color;
+                }
+           }
+     
+             span{
+                @include responsive-subtitle("small", 200) ;
+                z-index: 1;
+             }
+         }
+         .booking-btn{
+             @include responsive-booking-btn("small", 65%, 70%, 200);
+             animation-name: slide-btn;
+             animation-duration: 2s;
+             animation-iteration-count: 1;
+             @keyframes slide-btn {
+                 0%{
+                     left: 100%;
+                     color: transparent;
+                     background-color: transparent;
+                 }
+                 70%{
+                    color: transparent;
+                    background-color: transparent;
+                 }
+
+                 100%{
+                     left: 70%;
+                     color: $brand-color;
+                     background-color: $brand-color2;
+                 }
+             }
+             transition: all .2s;
+             // border-radius: 10px;
+             &:hover{
+                 border-bottom: 2px solid $brand-color ;
+                 transform: scale(1.02);
+             } 
+         }
+         .downarrow{
+             position: absolute;
+             @include responsive-icons(70px, 90%, 50%);
+             animation-name: downarrow;
+             animation-duration: 1.4s;
+             animation-iteration-count: infinite;
+             @keyframes downarrow {
+                 0%{
+                     top: 90%;
+                 }
+                 50%{
+                     top: 91.6%;
+                 }
+                 100%{
+                     top: 90%;
+                 }
+             }
+         }
+    }
+    nav{
+        #navIcon{
+            position: absolute;
+            @include responsive-icons(50px, 2%, 92%);
+            cursor: pointer;
+            transition: all.2s;
+        }
+        #closeIcon{
+            display: none;
+            position: absolute;
+            @include responsive-icons(40px, 2%, 92%);
+            cursor: pointer;
+            z-index: 12;
+        }
+        .nav-links{
+            position: absolute;
+            top: 2%;
+            right: -100%;
+            width: 96%;
+            height: 96vh;
+            margin: auto;
+            z-index: 5;
+            background-color: $brand-color2tra;
+            // display: none;
+            transition: all .8s;
+            ul{ 
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                flex-direction: column;
+                transform: translateY(40%);
+                li{
+                    list-style: none;
+                    text-align: center;
+                   
+                   
+                    a{
+                        text-decoration: none;
+                        color: $brand-color;
+                        font-size: map-get($font-size , medium );
+                        font-weight: 200;
+                        z-index: 12;
+                        line-height: 80px;
+                        transition: all .2s;
+                        &:hover{
+                            border-bottom: 2px solid $brand-color ;
+                            
+                        }
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+.hello{
+    position: relative;
+    top: 100px;
+    left: 150px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: darkkhaki;
+    color: darkslategray;
+}

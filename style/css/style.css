@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: url(../../images/pc-bg3.jpg) no-repeat center center/cover;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.container .details .brand-title {
+  font-size: 122px;
+  font-weight: 300;
+  color: #c78b42;
+  position: absolute;
+  top: 45%;
+  left: 70%;
+  line-height: 55px;
+  display: block;
+  text-align: left;
+  z-index: 1;
+  -webkit-animation-name: slide-title;
+          animation-name: slide-title;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes slide-title {
+  0% {
+    left: 100%;
+    color: transparent;
+  }
+  100% {
+    left: 70%;
+    color: #c78b42;
+  }
+}
+
+@keyframes slide-title {
+  0% {
+    left: 100%;
+    color: transparent;
+  }
+  100% {
+    left: 70%;
+    color: #c78b42;
+  }
+}
+
+.container .details .brand-title span {
+  font-size: 24px;
+  font-weight: 200;
+  display: block;
+  text-align: left;
+  z-index: 1;
+}
+
+.container .details .booking-btn {
+  padding: 10px 15px;
+  list-style: none;
+  text-decoration: none;
+  color: #c78b42;
+  background-color: #001a09;
+  position: absolute;
+  top: 65%;
+  left: 70%;
+  text-align: left;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  border: 2px solid transparent;
+  -webkit-animation-name: slide-btn;
+          animation-name: slide-btn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+@-webkit-keyframes slide-btn {
+  0% {
+    left: 100%;
+    color: transparent;
+    background-color: transparent;
+  }
+  70% {
+    color: transparent;
+    background-color: transparent;
+  }
+  100% {
+    left: 70%;
+    color: #c78b42;
+    background-color: #001a09;
+  }
+}
+
+@keyframes slide-btn {
+  0% {
+    left: 100%;
+    color: transparent;
+    background-color: transparent;
+  }
+  70% {
+    color: transparent;
+    background-color: transparent;
+  }
+  100% {
+    left: 70%;
+    color: #c78b42;
+    background-color: #001a09;
+  }
+}
+
+.container .details .booking-btn:hover {
+  border-bottom: 2px solid #c78b42;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.container .details .downarrow {
+  position: absolute;
+  width: 70px;
+  top: 90%;
+  left: 50%;
+  -webkit-animation-name: downarrow;
+          animation-name: downarrow;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes downarrow {
+  0% {
+    top: 90%;
+  }
+  50% {
+    top: 91.6%;
+  }
+  100% {
+    top: 90%;
+  }
+}
+
+@keyframes downarrow {
+  0% {
+    top: 90%;
+  }
+  50% {
+    top: 91.6%;
+  }
+  100% {
+    top: 90%;
+  }
+}
+
+.container nav #navIcon {
+  position: absolute;
+  width: 50px;
+  top: 2%;
+  left: 92%;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.container nav #closeIcon {
+  display: none;
+  position: absolute;
+  width: 40px;
+  top: 2%;
+  left: 92%;
+  cursor: pointer;
+  z-index: 12;
+}
+
+.container nav .nav-links {
+  position: absolute;
+  top: 2%;
+  right: -100%;
+  width: 96%;
+  height: 96vh;
+  margin: auto;
+  z-index: 5;
+  background-color: #001a09e8;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.container nav .nav-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+}
+
+.container nav .nav-links ul li {
+  list-style: none;
+  text-align: center;
+}
+
+.container nav .nav-links ul li a {
+  text-decoration: none;
+  color: #c78b42;
+  font-size: 32px;
+  font-weight: 200;
+  z-index: 12;
+  line-height: 80px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.container nav .nav-links ul li a:hover {
+  border-bottom: 2px solid #c78b42;
+}
+
+.hello {
+  position: relative;
+  top: 100px;
+  left: 150px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  background-color: darkkhaki;
+  color: darkslategray;
+}
