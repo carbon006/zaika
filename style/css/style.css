@@ -359,3 +359,98 @@
   text-align: left;
   letter-spacing: 5px;
 }
+
+.section-col .spice-he {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.section-col .spice-he h1 {
+  font-size: 48px;
+  font-weight: 200;
+  color: #c78b42;
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  line-height: 60px;
+  display: block;
+  text-align: left;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.section-col .img-sec {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+}
+
+.section-col .img-sec .img-div-4 img {
+  position: relative;
+  width: 62%;
+  top: 40px;
+  left: 10%;
+  z-index: 5;
+  border: 2px solid #c78b42;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.section-col .img-sec .img-div-4 img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.section-col .img-sec .img-div-5 img {
+  z-index: 6;
+  position: relative;
+  width: 62%;
+  top: -100px;
+  left: 25%;
+  border: 2px solid #c78b42;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.section-col .img-sec .img-div-5 img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.festival {
+  width: 100%;
+  height: 100vh;
+  border: 4px solid #c78b42;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.festival .fastival-frame {
+  border-right: 2px solid #c78b42;
+}
+
+.festival .fastival-frame .festival-img {
+  width: 100%;
+}
+
+.festival .fastival-frame .festival-img img {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0%;
+  right: 0%;
+}
+
+.festival .fastival-frame .festival-img .hello {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
